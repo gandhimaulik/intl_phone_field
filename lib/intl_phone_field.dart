@@ -218,7 +218,10 @@ class IntlPhoneField extends StatefulWidget {
 
   /// How thick the cursor will be.
   final double cursorWidth;
-
+  
+  //enable selection of text on tap and hold
+  final bool? enableInteractiveSelection;
+  
   /// Whether to show cursor.
   final bool? showCursor;
 
@@ -293,6 +296,7 @@ class IntlPhoneField extends StatefulWidget {
     this.cursorRadius = Radius.zero,
     this.cursorWidth = 2.0,
     this.showCursor = true,
+    this.enableInteractiveSelection,
     this.pickerDialogStyle,
     this.flagsButtonMargin = EdgeInsets.zero,
     this.magnifierConfiguration,
@@ -391,6 +395,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       textAlignVertical: widget.textAlignVertical,
       cursorColor: widget.cursorColor,
       onTap: widget.onTap,
+      enableInteractiveSelection : widget.enableInteractiveSelection,
       controller: widget.controller,
       focusNode: widget.focusNode,
       cursorHeight: widget.cursorHeight,
